@@ -111,6 +111,21 @@ void RunRoller(int val)
 Roller.setMaxTorque(100,percent);
 Roller.spin(forward,(double)val/100.0*12,volt);
 }
+void RunIntake(int val)
+{
+Intake.setMaxTorque(100,percent);
+Intake.spin(forward,(double)val/100.0*12,volt);
+}
+void RunSecondStage(int val)
+{
+SecondStage.setMaxTorque(100,percent);
+SecondStage.spin(forward,(double)val/100.0*12,volt);
+}
+void Store ()
+{
+  
+}
+
 
 int PrevE;//Error at t-1
 

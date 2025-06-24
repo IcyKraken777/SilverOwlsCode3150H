@@ -16,9 +16,12 @@ motor RM = motor(PORT19, ratio6_1, false);
 motor LB = motor(PORT13, ratio6_1, true);
 motor RB = motor(PORT20, ratio6_1, false);
 motor Roller = motor(PORT21, ratio6_1, false);
-digital_out Pistake = digital_out(Brain.ThreeWirePort.D);
-digital_out Tilt = digital_out(Brain.ThreeWirePort.B);
-digital_out Clamp = digital_out(Brain.ThreeWirePort.A);
+motor Intake = motor(PORT1, ratio6_1, false);
+motor SecondStage = motor(PORT1, ratio6_1, false);
+// Pneumatics 
+digital_out Piston = digital_out(Brain.ThreeWirePort.D);
+digital_out Lift = digital_out(Brain.ThreeWirePort.B);
+digital_out Extra = digital_out(Brain.ThreeWirePort.A);
 inertial Gyro = inertial(PORT2);
 //Naming convention: 
 // Important variables

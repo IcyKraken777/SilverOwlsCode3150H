@@ -298,7 +298,8 @@ int ATask(void)
   {
     pow=((Controller1.ButtonR2.pressing()-Controller1.ButtonR1.pressing())*100);//Calculate intake power, if button pressed, button.pressing returns 1
     RunRoller(-pow);
-    
+    RunIntake((Controller1.ButtonB.pressing())*100);
+    RunSecondStage((Controller1.ButtonA.pressing())*100);
   
   //RunPuncher((Controller1.ButtonB.pressing())*100);
   }

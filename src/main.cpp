@@ -307,45 +307,45 @@ int ATask(void)
   return 0;
 }
 
-int ButtonPressingX,XTaskActiv;
-int ButtonPressingY,YTaskActiv;
+int ButtonPressingLeft,LeftTaskActiv;
+int ButtonPressingDown,DownTaskActiv;
 
 int PTask(void)
 {
     while(true)
     {
       //Toggles Tilt
-    if(XTaskActiv==0&&Controller1.ButtonX.pressing()&&ButtonPressingX==0)
+    if(LeftTaskActiv==0&&Controller1.ButtonLeft.pressing()&&ButtonPressingLeft==0)
     {
-      ButtonPressingX=1;
-      XTaskActiv=1;
-      Tilt.set(true);
+      ButtonPressingLeft=1;
+      LeftTaskActiv=1;
+      Piston.set(true);
     }
 
-    else if(!Controller1.ButtonX.pressing())ButtonPressingX=0;
+    else if(!Controller1.ButtonLeft.pressing())ButtonPressingLeft=0;
 
-    else if(XTaskActiv==1&&Controller1.ButtonX.pressing()&&ButtonPressingX==0)
+    else if(LeftTaskActiv==1&&Controller1.ButtonLeft.pressing()&&ButtonPressingLeft==0)
     {
-      ButtonPressingX=1;
-      XTaskActiv=0;
-      Tilt.set(false);
+      ButtonPressingLeft=1;
+      LeftTaskActiv=0;
+      Piston.set(false);
     }
     //----------------------
       //Toggles Clamp
-    if(YTaskActiv==0&&Controller1.ButtonY.pressing()&&ButtonPressingY==0)
+    if(DownTaskActiv==0&&Controller1.ButtonDown.pressing()&&ButtonPressingDown==0)
     {
-      ButtonPressingY=1;
-      YTaskActiv=1;
-      Clamp.set(true);
+      ButtonPressingDown=1;
+      DownTaskActiv=1;
+      Lift.set(true);
     }
 
-    else if(!Controller1.ButtonY.pressing())ButtonPressingY=0;
+    else if(!Controller1.ButtonDown.pressing())ButtonPressingDown=0;
 
-    else if(YTaskActiv==1&&Controller1.ButtonY.pressing()&&ButtonPressingY==0)
+    else if(DownTaskActiv==1&&Controller1.ButtonDown.pressing()&&ButtonPressingDown==0)
     {
-      ButtonPressingY=1;
-      YTaskActiv=0;
-      Clamp.set(false);
+      ButtonPressingDown=1;
+      DownTaskActiv=0;
+      Lift.set(false);
     }
 
 

@@ -116,7 +116,7 @@ void RunIntake(int val2)
 Intake.setMaxTorque(100,percent);
 Intake.spin(forward,(double)val2/100.0*12,volt);
 }
-void RunSecondStage(int va3l)
+void RunSecondStage(int val3)
 {
 SecondStage.setMaxTorque(100,percent);
 SecondStage.spin(forward,(double)val3/100.0*12,volt);

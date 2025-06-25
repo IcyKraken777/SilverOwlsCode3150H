@@ -111,15 +111,15 @@ void RunRoller(int val)
 Roller.setMaxTorque(100,percent);
 Roller.spin(forward,(double)val/100.0*12,volt);
 }
-void RunIntake(int val)
+void RunIntake(int val2)
 {
 Intake.setMaxTorque(100,percent);
-Intake.spin(forward,(double)val/100.0*12,volt);
+Intake.spin(forward,(double)val2/100.0*12,volt);
 }
-void RunSecondStage(int val)
+void RunSecondStage(int va3l)
 {
 SecondStage.setMaxTorque(100,percent);
-SecondStage.spin(forward,(double)val/100.0*12,volt);
+SecondStage.spin(forward,(double)val3/100.0*12,volt);
 }
 void Store ()
 {
